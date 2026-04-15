@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Фиджитал-офис Альфа-Банка — интерактивная карта</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <h1 class="visually-hidden">Фиджитал-офис Альфа-Банка для семей в Коммунарке</h1>
+    </header>
+
+    <main class="main">
+      <section class="map-panel">
+        <div class="map-wrap">
+          <img src="images/map.png" alt="Карта офиса" class="map" id="mapImg" />
+          <div class="zone" data-zone="photo" style="left:75%; top:33%; width:14%; height:14%;">
+            <span class="dot"></span>
+          </div>
+
+          <div class="zone" data-zone="coworking" style="left:6%; top:40%; width:30%; height:20%;">
+            <span class="dot"></span>
+          </div>
+
+          <div class="zone" data-zone="academy" style="left:6%; top:6%; width:30%; height:18%;">
+            <span class="dot"></span>
+          </div>
+
+          <div class="zone" data-zone="meetings" style="left:66%; top:18%; width:14%; height:14%;">
+            <span class="dot"></span>
+          </div>
+
+          <div class="zone" data-zone="tree" style="left:46%; top:34%; width:16%; height:18%;">
+            <span class="dot"></span>
+          </div>
+
+          <div class="zone" data-zone="reception" style="left:75%; top:70%; width:26%; height:22%;">
+            <span class="dot"></span>
+          </div>
+
+          <div class="zone" data-zone="kids" style="left:6%; top:68%; width:30%; height:22%;">
+            <span class="dot"></span>
+          </div>
+
+          <div class="zone" data-zone="capsule" style="left:50%; top:5%; width:10%; height:18%;">
+            <span class="dot"></span>
+          </div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="list-card">
+          <h2>Зоны</h2>
+          <ul id="zoneList">
+            <li data-zone="photo">📸 Фотозона</li>
+            <li data-zone="kids">👨‍👩‍👧 Детская комната</li>
+            <li data-zone="coworking">👩‍💻 Коворкинг (75 мест)</li>
+            <li data-zone="tree">🌳 Финансовое древо</li>
+            <li data-zone="meetings">💼 Переговорки (3 комнаты)</li>
+            <li data-zone="academy">🎤 Лекторий</li>
+            <li data-zone="capsule">🧘 Капсула комфорта</li>
+            <li data-zone="reception">🚪 Входная зона / ресепшен</li>
+          </ul>
+          <p class="hint"></p>
+        </div>
+      </aside>
+    </main>
+
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-panel">
+        <button id="closeBtn" class="modal-close" aria-label="close">✕</button>
+        <div class="modal-body">
+          <h3 id="modalTitle"></h3>
+          <img id="modalImage" src="" alt="" />
+          <p id="modalDesc"></p>
+          <ul id="modalBenefits"></ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer visually-hidden">Демо</footer>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

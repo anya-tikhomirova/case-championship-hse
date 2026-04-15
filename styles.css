@@ -1,0 +1,41 @@
+*{box-sizing:border-box}
+:root{
+  --accent:#c02b2b;
+  --bg:#fff;
+  --muted:#f7f7f9;
+  --text:#222;
+}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text);}
+.page{max-width:1400px;margin:0 auto;}
+.header{padding:12px;}
+.main{display:flex;gap:18px;padding:12px;}
+.map-panel{flex:1;position:relative;min-height:600px;}
+.map-wrap{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.06);}
+.map{width:100%;height:auto;display:block;}
+
+.zone{position:absolute;border-radius:14px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.02); cursor:pointer; transition: transform .18s ease, box-shadow .18s ease;}
+.zone:hover{transform:translateY(-6px) scale(1.02); box-shadow:0 14px 28px rgba(192,43,43,0.08); outline: 4px solid rgba(192,43,43,0.06);}
+
+.zone .dot{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px rgba(192,43,43,0.08);left:50%;top:50%;transform:translate(-50%,-50%);}
+
+.sidebar{width:320px}
+.list-card{background:var(--panel, #fff);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06);}
+.list-card h2{margin-top:0}
+.list-card ul{padding-left:18px}
+.list-card li{margin:8px 0;cursor:pointer}
+
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:0;transition:opacity .18s ease}
+.modal.open{pointer-events:auto;opacity:1}
+.modal-panel{background:var(--bg);width:640px;max-width:92%;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,0.18);overflow:hidden;}
+.modal-close{float:right;border:none;background:none;font-size:24px;padding:12px;cursor:pointer}
+.modal-body{padding:18px}
+.modal-body img{width:100%;height:320px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+.hint{font-size:13px;color:#666;margin-top:12px}
+.visually-hidden{position:absolute !important;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+
+@media(max-width:900px){
+  .main{flex-direction:column;padding:8px}
+  .sidebar{width:100%}
+  .modal-panel{width:92%}
+  .map-panel{min-height:500px}
+}
